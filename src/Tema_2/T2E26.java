@@ -13,16 +13,19 @@ public class T2E26 {
 
         int num = sc.nextInt();
 
+            boolean primo = true;
+            for (int a = 2; a <= Math.sqrt(num); a++) {
+                if (num % a == 0) {
+                    primo = false;
+                    break;
+                }
+            }
+            if (primo) {
+                System.out.println("El numero introducido es primo");
+            }else{
+                System.out.println("El numero introducido no es primo");
+            }
 
-        if (num > 0){
-            boolean result = num % 3 == 0;
-            result = num % 3 == 0;
-            result = num % 5 == 0;
-            System.out.println("El numero " + num + " no es un numero  primo");
-        }else if (num <= 0){
-            System.out.println("Ese numero " + num + " no es un numero primo");
-        }else {
-            System.out.println("el numero " + num + " es un numero primo");
-        }
+
     }
 }

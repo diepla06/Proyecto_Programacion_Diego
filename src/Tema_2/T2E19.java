@@ -6,7 +6,7 @@ public class T2E19 {
         int num = 1;
         while (num <= 1000){
             boolean par = num % 2 == 0;
-
+//
             if (par == true){
                 System.out.println(num);
             }

@@ -10,14 +10,16 @@ public class T2E23 {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         int media = 0;
+        int contador = 0;
 
         while(num > 0) {
             media = num + media;
             System.out.println("Dime otro numero cuando quieras saber la media de estos pun un numero menor o igual a 0");
             num = sc.nextInt();
+            contador++;
         }
 
-        media = media / 2 ;
+        media = media / contador ;
         System.out.println("La media de los numeros es " + media);
     }
 }

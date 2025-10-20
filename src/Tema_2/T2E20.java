@@ -11,9 +11,10 @@ public class T2E20 {
 
         if (A > B){
             System.out.println("A es mayor a B");
-        }else if(A <= B){
+        }else if(A < B){
 
-            while (A <= B) {
+            while (A < B) {
+                //
                 boolean impar = A % 2 == 1;
 
                 if (impar == true) {

@@ -6,6 +6,7 @@ public class T2E21 {
             int num = 1;
             int resultado = 0;
             while (num <= 1000){
+                //
                 boolean par = num % 2 == 0;
 
                 if (par == true){
