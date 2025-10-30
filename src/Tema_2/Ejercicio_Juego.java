@@ -34,7 +34,7 @@ public class Ejercicio_Juego {
         double multiplicador;
         double danio;
         String basura = "";
-
+        int contador = 1;
 
 
         while (personaje != 1 && personaje !=2) {
@@ -153,6 +153,8 @@ public class Ejercicio_Juego {
         System.out.println("El jugador uno tiene " + velocidad1 + " de velocidad y el jugador dos tiene " + velocidad2 + " de velocidad") ;
         do {
             //TOD:Ronda 1,2, ...
+            System.out.println("RONDA " + contador);
+            contador ++;
             System.out.println("*".repeat(300));
             if (ataque1 > 0 && ataque2 > 0){
                 if (velocidad1 >= velocidad2){
