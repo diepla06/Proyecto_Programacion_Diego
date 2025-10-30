@@ -33,6 +33,7 @@ public class Ejercicio_Juego {
         boolean critico;
         double multiplicador;
         double danio;
+        String basura = "";
 
 
 
@@ -50,15 +51,23 @@ public class Ejercicio_Juego {
 
                 nombre1 = sc.nextLine();
 
+                System.out.println("vida: ");
                 vida1 = sc.nextInt();
+
+                System.out.println("ataque: ");
                 ataque1 = sc.nextInt();
+
+                System.out.println("velocidad de ataque: ");
                 velocidad1 = sc.nextInt();
+
+                System.out.println("defensa: ");
                 defensa1 = sc.nextInt();
+                sc.nextLine();
 
                 System.out.println(nombre1);
                 System.out.println("vida: " + vida1);
                 System.out.println("ataque:  " + ataque1);
-                System.out.println("velocidad: " + velocidad1);
+                System.out.println("velocidad de ataque: " + velocidad1);
                 System.out.println("vida: " + defensa1);
 
                 /*
@@ -68,11 +77,17 @@ public class Ejercicio_Juego {
                 System.out.println("Ingrese el nombre del personaje 2: ");
 
                     nombre2 = sc.nextLine();
-                    sc.nextLine();
 
+                    System.out.println("vida: ");
                     vida2 = sc.nextInt();
+
+                     System.out.println("ataque: ");
                     ataque2 = sc.nextInt();
+
+                    System.out.println("velocidad: ");
                     velocidad2 = sc.nextInt();
+
+                    System.out.println("defensa: ");
                     defensa2 = sc.nextInt();
 
                 System.out.println(nombre2);
@@ -80,7 +95,8 @@ public class Ejercicio_Juego {
                 System.out.println("ataque:  " + ataque2);
                 System.out.println("velocidad: " + velocidad2);
                 System.out.println("vida: " + defensa2);
-
+//TODO
+                break;
             }
             case 2: {
                 /*
@@ -126,16 +142,22 @@ public class Ejercicio_Juego {
                 System.out.println("ataque:  " + ataque2);
                 System.out.println("velocidad: " + velocidad2);
                 System.out.println("defensa: " + defensa2);
+                break;
             }
         }
+        //TODO
+        System.out.println("Pulsa cualquier tecla para empezar");
+        basura = sc.nextLine();
+
         System.out.println("EMPIEZA EL COMBATE");
         System.out.println("El jugador uno tiene " + velocidad1 + " de velocidad y el jugador dos tiene " + velocidad2 + " de velocidad") ;
         do {
+            //TOD:Ronda 1,2, ...
             System.out.println("*".repeat(300));
             if (ataque1 > 0 && ataque2 > 0){
-                if (velocidad1 > velocidad2){
+                if (velocidad1 >= velocidad2){
                     base = ataque1 * 10.00 / defensa2;
-                    critico = random.nextDouble() < critChance;
+                    critico = random.nextDouble(0.13) < critChance;
                     if (critico) {
                         multiplicador = critMult;
                     } else {
@@ -143,7 +165,9 @@ public class Ejercicio_Juego {
                     }
                     danio = base * multiplicador;
                     vida2 = vida2 - danio;
+                    //TODO??
                     defensa2 = vida2;
+
                     System.out.println("El jugador " + nombre2 + " ha recibido " + ((int) danio));
                     if (vida2 > 0) {
                         System.out.println("Vida de " + nombre2 + " = " + "█".repeat((int) vida2));
@@ -151,28 +175,29 @@ public class Ejercicio_Juego {
                         System.out.println("Vida de " + nombre2 + " = 0");
                     }
 
+                    if (vida2 >0) {
 
+                        base = ataque2 * 10.00 / defensa1;
+                        critico = random.nextDouble(0.13) < critChance;
+                        if (critico) {
+                            multiplicador = critMult;
+                        } else {
+                            multiplicador = 1.0;
+                        }
+                        danio = base * multiplicador;
+                        vida1 = vida1 - danio;
+                        defensa2 = vida2;
+                        System.out.println("El jugador " + nombre1 + " ha recibido " + ((int) danio));
+                        if (vida1 > 0) {
+                            System.out.println("Vida de " + nombre1 + " = " + "█".repeat((int) vida1));
+                        } else {
+                            System.out.println("Vida de " + nombre1 + " = 0");
+                        }
 
-                    base = ataque2 * 10.00 / defensa1;
-                    critico = random.nextDouble() < critChance;
-                    if (critico) {
-                        multiplicador = critMult;
-                    } else {
-                        multiplicador = 1.0;
                     }
-                    danio = base * multiplicador;
-                    vida1 = vida1 - danio;
-                    defensa2 = vida2;
-                    System.out.println("El jugador " + nombre1 + " ha recibido " + ((int)danio));
-                    if (vida1 > 0) {
-                        System.out.println("Vida de " + nombre1 + " = " + "█".repeat((int) vida1));
-                    } else {
-                        System.out.println("Vida de " + nombre1 + " = 0");
-                    }
-
                 }else if (velocidad2 > velocidad1) {
                     base = ataque2 * 10.00 / defensa1;
-                    critico = random.nextDouble() < critChance;
+                    critico = random.nextDouble(0.13) < critChance;
                     if (critico) {
                         multiplicador = critMult;
                     } else {
@@ -188,21 +213,23 @@ public class Ejercicio_Juego {
                         System.out.println("Vida de " + nombre1 + " = 0");
                     }
 
-                    base = ataque1 * 10.00 / defensa2;
-                    critico = random.nextDouble() < critChance;
-                    if (critico) {
-                        multiplicador = critMult;
-                    } else {
-                        multiplicador = 1.0;
-                    }
-                    danio = base * multiplicador;
-                    vida2 = vida2 - danio;
-                    defensa2 = vida2;
-                    System.out.println("El jugador " + nombre2 + " ha recibido " + ((int)danio));
-                    if (vida2 > 0) {
-                        System.out.println("Vida de " + nombre2 + " = "+ "█".repeat((int) vida2));
-                    } else {
-                        System.out.println("Vida de " + nombre2 + " = 0");
+                    if (vida1 > 0) {
+                        base = ataque1 * 10.00 / defensa2;
+                        critico = random.nextDouble(0.13) < critChance;
+                        if (critico) {
+                            multiplicador = critMult;
+                        } else {
+                            multiplicador = 1.0;
+                        }
+                        danio = base * multiplicador;
+                        vida2 = vida2 - danio;
+                        defensa2 = vida2;
+                        System.out.println("El jugador " + nombre2 + " ha recibido " + ((int) danio));
+                        if (vida2 > 0) {
+                            System.out.println("Vida de " + nombre2 + " = " + "█".repeat((int) vida2));
+                        } else {
+                            System.out.println("Vida de " + nombre2 + " = 0");
+                        }
                     }
                 }
             }
