@@ -2,6 +2,12 @@ package Tema_3;
 
 import java.util.Scanner;
 
+import static Tema_3.T3E1.numberSign;
+import static Tema_3.T3E3.calculateCircleArea;
+import static Tema_3.T3E3.calculateCirclePerimeter;
+import static Tema_3.T3E4.*;
+import static Tema_3.T3E5.tablaMultiplicar;
+
 public class T3E10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -27,31 +33,98 @@ public class T3E10 {
 
         switch (eleccion) {
             case 'a':
-                T3E1.main(args);
+                System.out.println("Dime un numero y te digo si es mayor, menor o igual a 0");
+
+                int num = sc.nextInt();
+
+                int result = numberSign(num);
+                if (result == 0){
+                    System.out.println("El numero es 0");
+                }else if (result == 1){
+                    System.out.println("El numero es mayor que 0");
+                }else if (result == -1){
+                    System.out.println("El numero es menor que 0");
+                }
                 break;
             case 'b':
-                T3E2.main(args);
+                numberSign(3);
+
+                System.out.println("Dime tu edad");
+                int age = sc.nextInt();
+
+                boolean edad = T3E2.isAdult(age);
+                if (edad){
+                    System.out.println("Eres mayor de edad");
+                }else {
+                    System.out.println("Eres menor de edad");
+                }
                 break;
             case 'c':
-                T3E3.main(args);
+                double perimetro;
+                double area;
+
+                System.out.println("Dime un radio mayor a 0");
+                double radio = sc.nextDouble();
+
+                boolean valido =  T3E3.validRadius(radio);
+                if (valido == false){
+                    System.out.println("Este numero no es valido");
+                }else {
+                    perimetro = calculateCirclePerimeter(radio);
+                    area = calculateCircleArea(radio);
+
+                    System.out.println("El perimetro es " + perimetro + "\n El area es " + area );
+                }
                 break;
             case 'd':
-                T3E4.main(args);
+                double valor;
+                double dolar;
+                double euro;
+                int elecion;
+
+
+                showMenu();
+                elecion = sc.nextInt();
+
+                System.out.println("Dime el valor que quieres transformar");
+                valor = sc.nextDouble();
+
+                switch (elecion){
+                    case 1:
+                        dolar = euro2dolar(valor);
+                        System.out.println("En dolares es " + dolar);
+
+                        break;
+                    case 2:
+                        euro = dolar2euro(valor);
+                        System.out.println("En euros es " + euro);
+
+                        break;
+                }
                 break;
             case 'e':
-                T3E5.main(args);
+                int numero;
+
+                System.out.println("Dime un numero entero del 1 al 10 y te digo su tabla de multiplicar");
+                numero = sc.nextInt();
+
+                if(numero < 1 || numero > 10){
+                    System.out.println("Ese numero no esta entre el 1 y el 10");
+                }else {
+                    tablaMultiplicar(numero);
+                }
                 break;
             case 'f':
-                T3E6.main(args);
+
                 break;
             case 'g':
-                T3E7.main(args);
+
                 break;
             case 'h':
-                T3E8.main(args);
+
                 break;
             case 'i':
-                T3E9.main(args);
+
                 break;
         }
     }

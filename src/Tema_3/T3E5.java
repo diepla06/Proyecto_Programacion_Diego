@@ -17,7 +17,7 @@ public class T3E5 {
         Scanner sc = new Scanner(System.in);
 ;
         int numero;
-        int result;
+
 
         System.out.println("Dime un numero entero del 1 al 10 y te digo su tabla de multiplicar");
         numero = sc.nextInt();
