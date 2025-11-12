@@ -13,6 +13,12 @@ public class T3E4 {
         return euro;
     }
 
+    public static void showMenu(){
+        System.out.println("Esta aplicacion pasa de dolares a euros y de auros a dolares");
+        System.out.println("Si quieres pasar de dolara euros, pulsa 1 \n Si quieres pasar de euros a dolares, pulsa 2");
+
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -21,11 +27,12 @@ public class T3E4 {
         double euro;
         int elecion;
 
+
+        showMenu();
+        elecion = sc.nextInt();
+
         System.out.println("Dime el valor que quieres transformar");
         valor = sc.nextDouble();
-
-        System.out.println("Sy quieres pasar a dolares pulse 1, si quiere pasar a euros pulse 2");
-        elecion = sc.nextInt();
 
         switch (elecion){
             case 1:

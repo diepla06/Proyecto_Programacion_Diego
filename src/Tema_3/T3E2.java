@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class T3E2 {
     public static boolean isAdult(int age){
+        //return age>18;
         if (age > 18){
             return true;
         } else{
@@ -11,8 +12,9 @@ public class T3E2 {
         }
     }
     public static void main(String[] args) {
+
         T3E1.numberSign(3);
-        T3E1.main(args);
+        //T3E1.main(args);
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime tu edad");

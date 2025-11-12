@@ -5,9 +5,11 @@ import java.util.Scanner;
 
 public class T3E5 {
 
-    public static int tablaMultiplicar(int numero, int contador){
-        int result = numero * contador;
-        return result;
+    public static void tablaMultiplicar(int numero){
+        for (int i =0;i<10;i++){
+            int mult = numero * i;
+            System.out.println("El resultado es " + mult);
+        }
     }
 
     public static void main(String[] args) {
@@ -23,10 +25,7 @@ public class T3E5 {
         if(numero < 1 || numero > 10){
             System.out.println("Ese numero no esta entre el 1 y el 10");
         }else {
-            for(int contador = 1 ; contador <= 10 ; contador++) {
-                result = tablaMultiplicar(numero, contador);
-                System.out.println(numero + " * " + contador + " = " + result);
-            }
+            tablaMultiplicar(numero);
         }
     }
 }

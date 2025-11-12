@@ -3,7 +3,7 @@ package Tema_3;
 import java.util.Scanner;
 
 public class T3E7 {
-    public static boolean Primo(int num) {
+    public static boolean primo(int num) {
         boolean primo = true;
         if (num <= 1) {
             return false;
@@ -27,8 +27,9 @@ public class T3E7 {
         System.out.println("Dime numeros y yo te dire si es primo o no, en el caso de que me pongas el 0, se terminara el programa");
         num = sc.nextInt();
 
-        while (num > 0){
-            primo = Primo(num);
+        while (num != 0){
+            //comprobarsies positivo (clculo primo),y si esnegativo(digo quenoes correcto)
+            primo = primo(num);
             if (primo){
                 System.out.println(num + " es primo");
             }else {
