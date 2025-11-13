@@ -7,7 +7,7 @@ public class T3E8 {
     public static boolean diaMesAnyo(int dia, int mes, int anyo){
         if ((dia < 1 || dia > 31) || (mes < 1 || mes > 12)){
             return false;
-        }else{
+        }else {
             return true;
         }
         //añademe febrero

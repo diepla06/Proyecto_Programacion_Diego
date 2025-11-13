@@ -7,6 +7,8 @@ import static Tema_3.T3E3.calculateCircleArea;
 import static Tema_3.T3E3.calculateCirclePerimeter;
 import static Tema_3.T3E4.*;
 import static Tema_3.T3E5.tablaMultiplicar;
+import static Tema_3.T3E8.diaMesAnyo;
+import static Tema_3.T3E9.piramide;
 
 public class T3E10 {
     public static void main(String[] args) {
@@ -115,16 +117,68 @@ public class T3E10 {
                 }
                 break;
             case 'f':
-
+                System.out.println("Te digo todas las tablas del 1 al 10");
+                numero = 1;
+                int i = 1;
+                for(numero = 1; numero < 11 ; numero++) {
+                    T3E5.tablaMultiplicar(numero);
+                }
                 break;
             case 'g':
 
+                boolean primo;
+
+                System.out.println("Dime numeros y yo te dire si es primo o no, en el caso de que me pongas el 0, se terminara el programa");
+                num = sc.nextInt();
+
+                while (num != 0){
+                    //comprobarsies positivo (clculo primo),y si esnegativo(digo quenoes correcto)
+                    primo = T3E7.primo(num);
+                    if (primo){
+                        System.out.println(num + " es primo");
+                    }else {
+                        System.out.println(num + " no es primo");
+                    }
+                    System.out.println("Dime otro numero positivo o 0 para finalizar");
+                    num = sc.nextInt();
+                }
+                System.out.println("Finalizando programa...");
                 break;
             case 'h':
+                int dia;
+                int mes;
+                int anyo;
 
+
+                System.out.println("Dime un dia mes y año y te dire si es valido o no");
+                System.out.println("Dime el dia DD");
+                dia = sc.nextInt();
+
+                System.out.println("Dime el dia MM");
+                mes = sc.nextInt();
+
+                System.out.println("Dime el dia AA");
+                anyo = sc.nextInt();
+
+                valido = diaMesAnyo(dia, mes, anyo);
+
+                if (valido == true){
+                    System.out.println("La facha nombrada es valida");
+                }else {
+                    System.out.println("La fecha nombrada no es valida");
+                }
                 break;
             case 'i':
+                int line;
+                char caracter;
 
+                System.out.println("Dime las lineas que quieres que tenga");
+                line = sc.nextInt();
+
+                System.out.println("Dime que caracter quieres que tenga");
+                caracter = sc.next().charAt(0);
+
+                piramide(line,caracter);
                 break;
         }
     }

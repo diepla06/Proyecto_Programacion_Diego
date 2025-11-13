@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class T3E5 {
 
     public static void tablaMultiplicar(int numero){
-        for (int i =0;i<10;i++){
+        for (int i =0;i<11;i++){
             int mult = numero * i;
             System.out.println("El resultado es " + mult);
         }
