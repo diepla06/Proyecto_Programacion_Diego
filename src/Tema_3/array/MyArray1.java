@@ -12,8 +12,16 @@ public class MyArray1 {
 
         int max;
         max = MyArray.maxArrays(muestra);
+        System.out.println("El numero mas alto es : " + max);
 
-        minArrays(muestra);
+        int min;
+        min = MyArray.minArrays(muestra);
+        System.out.println("El numero mas bajo es : " + min);
+
+        double media;
+        media = MyArray.mediaArrays(muestra);
+        System.out.println("La media de los numeros es : " + media);
+
         
     }
 }

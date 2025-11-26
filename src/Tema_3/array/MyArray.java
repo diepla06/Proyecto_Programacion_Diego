@@ -12,7 +12,7 @@ public class MyArray {
 
         int max = muestra[0];
 
-        for (int i = 1; i < muestra.length; i++) {
+        for (int i = 0; i < muestra.length; i++) {
             if (muestra[i] > max) {
                 max = muestra[i];
             }
@@ -23,7 +23,7 @@ public class MyArray {
     public static int minArrays(int[] muestra) {
         int min = muestra[0];
 
-        for (int i = 1; i < muestra.length; i++) {
+        for (int i = 0; i < muestra.length; i++) {
             if (muestra[i] < min) {
                 min = muestra[i];
             }
@@ -31,10 +31,11 @@ public class MyArray {
         return min;
     }
 
-    public static int mediaArrays(int[] muestra) {
-        int media = muestra[0];
-        int suma = 0;
-        for (int i = 1; i < muestra.length; i++) {
+    public static double mediaArrays(int[] muestra) {
+        int i ;
+        double media = 0;
+        double suma = 0;
+        for (i = 0; i < muestra.length; i++) {
             suma = suma + muestra[i];
         }
         media = suma / muestra.length;
