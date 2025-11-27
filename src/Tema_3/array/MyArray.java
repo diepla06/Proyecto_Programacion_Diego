@@ -41,6 +41,25 @@ public class MyArray {
         media = suma / muestra.length;
         return media;
     }
+
+    public static boolean buscarArrays(int[] muestra, int num){
+
+
+        boolean resultado = false;
+
+        for (int i = 0; i < muestra.length; i++){
+            if (muestra[i] == num) {
+                resultado = true;
+            }
+        }
+        return  resultado;
+    }
+    public static int sumaArrays(int[] mustra, int[] mustra2){
+
+        for(int i = 0; i < mustra.length; i++){
+
+        }
+    }
 }
 
 
