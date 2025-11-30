@@ -2,7 +2,7 @@ package Tema_3;
 
 import java.util.Scanner;
 
-public class MyMath7 {
+public class MyMath11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num;

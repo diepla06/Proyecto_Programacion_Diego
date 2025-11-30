@@ -54,12 +54,15 @@ public class MyArray {
         }
         return  resultado;
     }
-    public static int sumaArrays(int[] mustra, int[] mustra2){
+
+   /* public static int sumaArrays(int[] mustra, int[] mustra2){
 
         for(int i = 0; i < mustra.length; i++){
 
         }
     }
+
+    */
 }
 
 

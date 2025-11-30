@@ -8,7 +8,7 @@ public class MyMath5 {
         int num;
         int cont;
 
-        System.out.println("Dime un numero y te dire cuantos pares tiene");
+        System.out.println("Dime un numero y te dire cuantos impares tiene");
         num = sc.nextInt();
 
         cont = MyMath.numerosImpares(num);

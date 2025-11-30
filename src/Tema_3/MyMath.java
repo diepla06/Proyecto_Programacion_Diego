@@ -75,4 +75,66 @@ public class MyMath {
         }
         return cont;
     }
+
+    public static int factorial(int num){
+        int resultado = 1;
+
+        for (int i = 1; i <= num; i++){
+            resultado = resultado * i;
+        }
+        return resultado;
+    }
+
+    public static int factorialRec(int num){
+        if  (num == 1 || num == 0){
+            return 1;
+        }else {
+            return factorialRec(num-1) * num;
+        }
+    }
+
+
+    public static int funcion(double a, double b, double c) {
+        double discriminante = b * b - 4 * a * c;
+
+        if (a == 0) {
+
+            return 1;
+        } else if (discriminante > 0) {
+            return 2;
+        } else if (discriminante == 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+
+    public static int sumarDigitos(int numero) {
+        int suma = 0;
+        int numAbs = Math.abs(numero);
+
+
+        while (numAbs > 0) {
+            int digito = numAbs % 10;
+            suma += digito;
+
+            numAbs /= 10;
+        }
+        return suma;
+    }
+
+    public static boolean esPrimo(int num){
+        boolean primo = true;
+        int cont = 2;
+        if (num <= 1) {
+            return false;
+        } else if (cont * cont > num) {
+            return true;
+        }else if (num % cont == 0){
+            return false;
+        }else {
+            return esPrimo(num);
+        }
+    }
 }
