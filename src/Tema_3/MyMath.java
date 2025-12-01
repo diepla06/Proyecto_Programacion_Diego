@@ -32,8 +32,9 @@ public class MyMath {
         } else {
             for (int a = 2; a <= Math.sqrt(num); a++) {
                 if (num % a == 0) {
-                    primo = false;
-                    break;
+                    //primo = false;
+                    //break;
+                    return primo;
                 }
             }
             return primo;

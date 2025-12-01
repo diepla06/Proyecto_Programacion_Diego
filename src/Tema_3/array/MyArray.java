@@ -1,6 +1,8 @@
 package Tema_3.array;
 
 public class MyArray {
+
+
     public static void printArrays(int[] muestra) {
         int num;
         for (num = 0; num < muestra.length; num++) {
@@ -32,7 +34,7 @@ public class MyArray {
     }
 
     public static double mediaArrays(int[] muestra) {
-        int i ;
+        int i;
         double media = 0;
         double suma = 0;
         for (i = 0; i < muestra.length; i++) {
@@ -42,27 +44,50 @@ public class MyArray {
         return media;
     }
 
-    public static boolean buscarArrays(int[] muestra, int num){
+    public static boolean buscarArrays(int[] muestra, int num) {
 
 
         boolean resultado = false;
 
-        for (int i = 0; i < muestra.length; i++){
+        for (int i = 0; i < muestra.length; i++) {
             if (muestra[i] == num) {
                 resultado = true;
             }
         }
-        return  resultado;
+        return resultado;
     }
 
-   /* public static int sumaArrays(int[] mustra, int[] mustra2){
+    public static int[] sumaArrays(int[] mustra, int[] mustra2) {
 
-        for(int i = 0; i < mustra.length; i++){
+        int[] mustra3 = new int[6];
 
+        for (int i = 0; i < mustra.length; i++) {
+            mustra3[i] = mustra[i] + mustra2[i];
         }
+        return mustra3;
     }
+    public static int[] restaArrays(int[] muestra, int[] muestra2) {
 
-    */
+        int[] muestra3 = new int[6];
+
+        for (int i = 0; i < muestra.length; i++) {
+            muestra3[i] = muestra[i] - muestra2[i];
+        }
+        return muestra3;
+
+    }
+    public static int escalaArray(int[] muestra, int[] muestra2){
+        int[] muestra3 = new int[6];
+        int suma = 0;
+
+        for (int i = 0; i < muestra.length; i++) {
+            muestra3[i] = muestra[i] * muestra2[i];
+        }
+        for (int b = 0; b < muestra.length; b++){
+            suma += muestra3[b] ;
+        }
+        return suma;
+    }
 }
 
 
