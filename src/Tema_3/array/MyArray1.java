@@ -19,7 +19,23 @@ public class MyArray1 {
         char opcion;
         int num;
 
+        System.out.println("\n--- MENU ---\n");
+        System.out.println("a. Imprimir Array");
+        System.out.println("b. Numero macimo de el Array");
+        System.out.println("c. Numero minimo de el Array");
+        System.out.println("d. Media de el Array");
+        System.out.println("e. Te digo si el numero existe en el Array");
+        System.out.println("f. Funcion que hace la suma de dos vectores");
+        System.out.println("g. Funcion que hace la resta de dos vectores");
+        System.out.println("h. Funcion que hace el producto escalar de dos vectores");
+        System.out.println("i. Inversor de orden de el Array");
+        System.out.println("j. Procedimiento de inversor de array");
+        System.out.println("k. Te digo si el Array es capicua");
+        System.out.println("\n--- EXIT ---\n //--Cualquier otro caracter--//");
+        
+        System.out.println("Dime una letra");
 
+        boolean volver = true;
         do {
             opcion = Character.toLowerCase(sc.next().charAt(0));
 
@@ -80,23 +96,48 @@ public class MyArray1 {
                     break;
 
                 case 'h':
+                    int resultado2;
+                    resultado2 = escalaArray(muestra, muestra2);
 
+                    System.out.println("El primer array es : " + Arrays.toString(muestra));
+                    System.out.println("El segundo array es : " + Arrays.toString(muestra2));
+                    System.out.println("El resultado es : " + resultado2);
                     break;
 
                 case 'i':
+                    int[] reversa = MyArray.reversaArray(muestra);
 
+                    System.out.println("Vamos a hacer la reversa de la siguiente array: \n" + Arrays.toString(muestra));
+                    System.out.println(Arrays.toString(reversa));
                     break;
 
                 case 'j':
-
+                    MyArray.reversaArrays(muestra);
                     break;
+
+                case 'k':
+                boolean capicua= MyArray.capicuaArray(muestra);
+
+                if (capicua){
+                    System.out.println("El array es capicua");
+                }else{
+                    System.out.println("el array no es capicua");
+                }
+                break;
 
                 default:
                     // No se realiza ninguna acción y se muestra un mensaje de error/no válido
                     System.out.println("La opción '" + opcion + "' sirve para parar el programa. No se ejecuta ninguna tarea.");
+                    System.out.println("Si no quieres que el programa se apague dime un valor valido, si no vuelve a presionar un valor no valido");
                     System.out.println("Dime una opcion valida : ");
+                    sc.nextLine();
+                    opcion = sc.next().charAt(0);
+                    
+                    if (opcion < 'a' || opcion > 'j'){
+                        boolean b = !volver;
+                    }
                     break;
             }
-        } while (opcion < 'a' || opcion > 'j');
+        } while (!volver);
     }
 }

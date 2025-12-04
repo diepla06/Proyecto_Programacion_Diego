@@ -1,5 +1,7 @@
 package Tema_3.array;
 
+import java.util.Arrays;
+
 public class MyArray {
 
 
@@ -83,10 +85,41 @@ public class MyArray {
         for (int i = 0; i < muestra.length; i++) {
             muestra3[i] = muestra[i] * muestra2[i];
         }
-        for (int b = 0; b < muestra.length; b++){
-            suma += muestra3[b] ;
+        for (int i = 0; i < muestra.length; i++){
+            suma += muestra3[i] ;
         }
         return suma;
+    }
+    public static int[] reversaArray(int[] muestra){
+       int[] reversa = new int[6];
+       int pasa = 0;
+
+
+       for (int i  = muestra.length -1; i >= 0 ; i--){
+           reversa[pasa] = muestra[i];
+           pasa ++;
+       }
+       return reversa;
+    }
+
+    public static void reversaArrays(int[] muestra) {
+        int[] reversa = new int[6];
+        int pasa = 0;
+
+        for (int i = muestra.length -1; i >= 0 ; i--){
+            reversa[pasa] = muestra[i];
+            pasa ++;
+        }
+
+        System.out.println("Vamos a hacer la reversa de la siguiente array: \n" + Arrays.toString(muestra));
+        System.out.println(Arrays.toString(reversa));
+    }
+    public static boolean capicuaArray(int[] muestra){
+        for (int i = 0; i < muestra.length / 2 ; i ++)
+            if (muestra[i] != muestra[muestra.length - 1 - i]){
+                return false;
+            }
+        return true;
     }
 }
 
