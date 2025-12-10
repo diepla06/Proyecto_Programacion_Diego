@@ -201,7 +201,7 @@ public class MyMath10 {
                     break;
 
                 default:
-                    // No se realiza ninguna acción y se muestra un mensaje de error/no válido
+
                     System.out.println("La opción '" + opcion + "' sirve para parar el programa. No se ejecuta ninguna tarea.");
                     System.out.println("Dime una opcion valida : ");
                     break;
