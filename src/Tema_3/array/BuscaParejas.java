@@ -9,18 +9,14 @@ public class BuscaParejas {
         Random generadorAleatorio = new Random();
 
 
-
-
         int[] tableroCartas = new int[20];
         int indiceLlenado = 0;
 
-        //Llenar el array (del 1 al 10)
         for (int numeroPareja = 1; numeroPareja <= 10; numeroPareja++) {
             tableroCartas[indiceLlenado++] = numeroPareja;
             tableroCartas[indiceLlenado++] = numeroPareja;
         }
 
-        //Mezcla aleatoria de las cartas
         for (int i = tableroCartas.length - 1; i > 0; i--) {
             int indiceAleatorio = generadorAleatorio.nextInt(i + 1);
             int temporal = tableroCartas[i];
@@ -28,7 +24,6 @@ public class BuscaParejas {
             tableroCartas[indiceAleatorio] = temporal;
         }
 
-        //Array para saber si una carta está descubierta o no
         boolean[] cartaDescubierta = new boolean[20];
         int contadorParejasEncontradas = 0;
 
@@ -37,15 +32,12 @@ public class BuscaParejas {
 
         while (contadorParejasEncontradas < 10) {
 
-            //tablero actual
             System.out.println("\n--- ESTADO DEL TABLERO ---");
             for (int i = 0; i < tableroCartas.length; i++) {
                 System.out.print("(" + (i + 1) + ")");
                 if (cartaDescubierta[i]) {
-                    // Muestra el número directamente
                     System.out.print(tableroCartas[i] + " ");
                 } else {
-                    // Muestra la X directamente
                     System.out.print("X ");
                 }
                 if ((i + 1) % 5 == 0) {
@@ -53,10 +45,8 @@ public class BuscaParejas {
                 }
             }
 
-            //entradas validadas
             System.out.println("\nSelecciona dos posiciones (1-20):");
 
-            // Lógica para obtener la POSICIÓN 1
             int posicion1 = -1;
             while (posicion1 < 0 || posicion1 >= 20 || cartaDescubierta[posicion1]) {
                 System.out.print("Posición 1: ");
@@ -88,7 +78,6 @@ public class BuscaParejas {
             int valorCarta1 = tableroCartas[posicion1];
             int valorCarta2 = tableroCartas[posicion2];
 
-            // Mostrar temporalmente
             System.out.println("\n--- REVELACIÓN ---");
             for (int i = 0; i < tableroCartas.length; i++) {
                 System.out.print("(" + (i + 1) + ")");
@@ -96,7 +85,6 @@ public class BuscaParejas {
 
                     System.out.print(tableroCartas[i] + " ");
                 } else {
-                    // Muestra la X directamente
                     System.out.print("X ");
                 }
 
@@ -106,13 +94,11 @@ public class BuscaParejas {
 
 
             if (valorCarta1 == valorCarta2) {
-                // Pareja encontrada
                 System.out.println("¡Pareja encontrada! Se quedan visibles.");
                 cartaDescubierta[posicion1] = true;
                 cartaDescubierta[posicion2] = true;
                 contadorParejasEncontradas++;
             } else {
-                // Diferentes
                 System.out.println("No son pareja. Ocultando cartas inmediatamente.");
 
                 Thread.sleep(5000);
