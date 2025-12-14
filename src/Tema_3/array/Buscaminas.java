@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class Buscaminas {
 
-// No se importan clases innecesarias
-
 
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
@@ -30,7 +28,6 @@ public class Buscaminas {
             while (minasColocadas < NUMERO_MINAS) {
                 int posAleatoria = random.nextInt(TAMANO_ARRAY);
 
-                // Si la posición aún no tiene mina, la colocamos
                 if (tableroSecreto[posAleatoria] != VALOR_MINA) {
                     tableroSecreto[posAleatoria] = VALOR_MINA;
                     minasColocadas++;
@@ -60,23 +57,16 @@ public class Buscaminas {
             boolean juegoActivo = true;
 
             while (juegoActivo) {
-
-                // --- MOSTRAR TABLERO JUGADOR ---
                 System.out.println("\n--- Tablero Actual ---");
-
-                // Mostrar índices (1 a 20)
                 for (int i = 1; i <= TAMANO_ARRAY; i++) {
                     System.out.printf("%3d", i);
                 }
                 System.out.println();
 
-                // Mostrar estado de las casillas
                 for (int i = 0; i < TAMANO_ARRAY; i++) {
                     if (casillasVisibles[i]) {
-                        // Si está visible, muestra el número (0, 1 o 2)
                         System.out.printf("%3d", tableroSecreto[i]);
                     } else {
-                        // Si está oculta, muestra el carácter '?'
                         System.out.print(" ? ");
                     }
                 }
@@ -102,7 +92,7 @@ public class Buscaminas {
                 if (tableroSecreto[indice] == VALOR_MINA) {
 
                     System.out.println("\n ¡BOOM! Has pisado una mina en la posición " + posicion + ".");
-                    juegoActivo = false; // El juego termina
+                    juegoActivo = false;
                 }
                 else {
 
@@ -113,7 +103,6 @@ public class Buscaminas {
                         System.out.println("Esa casilla (" + posicion + ") ya estaba revelada. Elige otra.");
                     }
 
-                    // --- VERIFICAR CONDICIÓN DE VICTORIA ---
                     int casillasNoMina = TAMANO_ARRAY - NUMERO_MINAS;
                     int casillasReveladas = 0;
 
