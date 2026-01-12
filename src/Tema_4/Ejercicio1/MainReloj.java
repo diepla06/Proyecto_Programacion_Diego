@@ -7,7 +7,6 @@ public class MainReloj {
         reloj1.min = 50;
         reloj1.seg = 20;
         reloj1.formato24 = true;
-        reloj1.mostrarHora(10,50,20,true);
         System.out.println(reloj1);
     }
 }

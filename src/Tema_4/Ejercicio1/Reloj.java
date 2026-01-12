@@ -59,7 +59,7 @@ public class Reloj {
         }
     }
 
-    public void mostrarHora(int hora, int min, int seg, boolean formato24){
+   /* public void mostrarHora(int hora, int min, int seg, boolean formato24){
         if(formato24) {
             System.out.println("Son las " + hora + ":" + min + ":" + seg);
         } else{
@@ -70,5 +70,5 @@ public class Reloj {
                 System.out.println("Son las " + hora + ":" + min + ":" + seg + " am");
             }
         }
-    }
+    }*/
 }

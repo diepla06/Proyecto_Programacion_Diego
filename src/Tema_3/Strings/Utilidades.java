@@ -3,7 +3,7 @@ package Tema_3.Strings;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class Strings {
+/*public class Strings {
     public String invertirYMayusculas(String cadena) {
         // Usamos StringBuilder para la construcción eficiente
         StringBuilder cadenaInvertida = new StringBuilder();
@@ -24,7 +24,7 @@ public class Strings {
      * @param cadena La cadena de entrada.
      * @return El número de vocales encontradas.
      */
-    public int contarVocales(String cadena) {
+    /*public int contarVocales(String cadena) {
         int contador = 0;
 
         for (int i = 0; i < cadena.length(); i++) {
@@ -154,7 +154,7 @@ public class Strings {
      * Muestra el histograma de vocales. Cuenta mayúsculas y minúsculas juntas.
      * @param cadena La cadena de entrada para el análisis.
      */
-    public void mostrarHistogramaVocales(String cadena) {
+   /* public void mostrarHistogramaVocales(String cadena) {
         System.out.println("\n--- Histograma de Frecuencias de Vocales ---");
 
         // Array simple para las 5 cuentas: [a/A, e/E, i/I, o/O, u/U]
@@ -208,3 +208,4 @@ public class Strings {
     }
 
     }
+*/

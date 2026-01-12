@@ -4,7 +4,7 @@ import java.util.Scanner;
 
     public class MenuMyString {
 
-        public static void main(String[] args) {
+/*        public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
 
 
@@ -39,7 +39,7 @@ import java.util.Scanner;
                     case "A":
                         System.out.print("\n[A] Introduce una cadena para invertir y poner en mayúsculas: ");
                         String cadA = scanner.nextLine();
-                        System.out.println("-> Resultado: " + Utilidades.invertirYMayusculas(cadA));
+                        System.out.println("-> Resultado: " + utilidades.invertirYMayusculas(cadA));
                         break;
 
                     case "B":
@@ -93,6 +93,6 @@ import java.util.Scanner;
             }
 
             scanner.close();
-        }
+        }*/
     }
 
