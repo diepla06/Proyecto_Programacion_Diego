@@ -48,7 +48,7 @@ public class Hero {
     }
 
     public int getHealth(){return health;}
-    public void setLevel(int attack) {
+    public void setHealth(int attack) {
         this.attack = attack;
     }
 
@@ -91,7 +91,26 @@ public class Hero {
     }
 
 
+    public String toString() {
+        return "Nombre: " + name + "\nNivel: " + level + "\nVida: " + health + "\n Vida Maxima: " + maxHealth + "\nExperiencia: " + experience + "\nAtaque: " + attack + "\nDefensa: " + defense;
+    }
 
-
-
+    public void attack(Hero hero1){
+        System.out.println(hero1.name + " tiene " + this.health + " vida.");
+        int damage = Math.max(1,(this.attack - hero1.defense)+10);
+        hero1.setHealth(hero1.getHealth()- damage);
+        System.out.println(this.name + " le ha dado una leche a " + hero1.name);
+        this.experience += 10;
+        System.out.println(this.name + " ha ganado 10 de xp.");
+    }
+    public void levelUp(int attack, int defense, int maxHeath, int level, int experience){
+        if(experience > 50){
+            level += 1;
+            maxHeath += 5;
+            attack += 1;
+            defense += 1;
+            experience -= 50;
+            System.out.println("Has subido de nivel: \n +1 lvl: " + level + "\n +5 Vida maxima: " + maxHeath + "\n +1 dps: " + attack + "\n +1 de defensa: " + defense);
+        }
+    }
 }
