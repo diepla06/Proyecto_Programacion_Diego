@@ -1,10 +1,7 @@
 package Tema_4.Ejercicio2;
 
-import java.sql.SQLOutput;
-import java.util.IllegalFormatCodePointException;
-
 public class Persona {
-    String DNI;
+    private String DNI;
     private String nombre;
     private String apellido;
     private int edad;
@@ -27,6 +24,11 @@ public class Persona {
     }
 
     public String getDNI() {
+        return DNI;
+    }
+
+    public String setDNI(String DNI) {
+        this.DNI = DNI;
         return DNI;
     }
 
@@ -58,18 +60,18 @@ public class Persona {
     public String toString(){
        return  "Dni: " + DNI + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad;
     }
-    public void isAdult(int edad){
+    public boolean isAdult(int edad){
         if (edad >= adultAge){
-            System.out.println("Tiene: " + edad + ", es mayor de edad");
+            return true;
         }else {
-            System.out.println("Tiene: " + edad + ", es menor de edad");
+            return false;
         }
     }
-    public  void isRetired(int edad){
+    public  boolean isRetired(int edad){
         if (edad > retiredAge){
-            System.out.println("Tiene: " + edad + ", esta jubilado");
+            return true;
         }else {
-            System.out.println("Tiene: " + edad + ", no esta jubilado");
+            return false;
         }
     }
     public void ageDifference(Persona Persona1){

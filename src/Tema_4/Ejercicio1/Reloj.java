@@ -3,7 +3,7 @@ package Tema_4.Ejercicio1;
 import java.awt.desktop.AboutEvent;
 
 public class Reloj {
-    int hora;
+    private int hora;
     int min;
     int seg;
     boolean formato24;

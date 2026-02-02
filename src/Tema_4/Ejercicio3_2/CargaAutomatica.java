@@ -2,7 +2,16 @@ package Tema_4.Ejercicio3_2;
 
 public class CargaAutomatica {
     public static void main(String[] args) {
+
+
+
+
         System.out.println("=== INICIO DE LA PRUEBA AUTOMÁTICA ===");
+
+
+        //array de 10 personas
+        //menu
+        //falta recibir transferencia
 
 
         System.out.println("1. Creando clientes...");
@@ -25,7 +34,7 @@ public class CargaAutomatica {
         System.out.println("   [Estado Persona 1] " + p1.esMorosa());
         System.out.println("   [Estado Persona 2] " + p2.esMorosa() + "\n");
 
-        //Operaciones
+
         System.out.println("4. Realizando operaciones...");
 
         //La persona 1 cobra la nomina

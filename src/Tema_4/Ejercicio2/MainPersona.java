@@ -22,18 +22,18 @@ public class MainPersona {
         System.out.println("Dime tu edad");
         edad = sc.nextInt();
 
-        Persona Persona1 = new Persona();
-        Persona1.DNI = dni;
-        Persona1.setNombre(nombre);
-        Persona1.setApellido(apellidos);
-        Persona1.setEdad(edad);
-        Persona1.print(dni,nombre, apellidos, edad);
-        System.out.println(Persona1);
-        Persona1.isAdult(Persona1.getEdad());
-        Persona1.isRetired(Persona1.getEdad());
-        Persona1.ageDifference(Persona1);
-        if(Persona1.checkDNI(Persona1.DNI)){
-            System.out.println(Persona1.checkDNI(Persona1.DNI));
+        Persona persona1 = new Persona();
+        persona1.setDNI(dni);
+        persona1.setNombre(nombre);
+        persona1.setApellido(apellidos);
+        persona1.setEdad(edad);
+        persona1.print(dni,nombre, apellidos, edad);
+        System.out.println(persona1);
+        persona1.isAdult(persona1.getEdad());
+        persona1.isRetired(persona1.getEdad());
+        persona1.ageDifference(persona1);
+        if(persona1.checkDNI(persona1.setDNI(dni))){
+            System.out.println(persona1.checkDNI(persona1.setDNI(dni)));
         }
     }
 }
