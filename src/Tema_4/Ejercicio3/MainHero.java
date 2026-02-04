@@ -34,8 +34,8 @@ public class MainHero {
 
         Hero hero1 = new Hero(name, level, health, maxHealth, experience, attack, defense);
         hero1.toString();
-        hero1.drinkPotion(health, maxHealth);
-        hero1.rest(health, maxHealth);
+        hero1.drinkPotion();
+        hero1.rest();
         hero1.attack(hero1);
         hero1.levelUp(attack, defense, maxHealth, level, experience);
     }

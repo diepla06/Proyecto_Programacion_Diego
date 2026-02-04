@@ -72,22 +72,26 @@ public class Hero {
         return defense;
     }
 
-    public int drinkPotion(int health, int maxHealth){
-        health = health + 10;
-
-        if (health > maxHealth){
-            health = maxHealth;
-        }
-        return health;
+    public void setDefHealth(int health) {
+        this.health = health;
+        if (this.health < 0) this.health = 0;
     }
 
-    public int rest(int health, int maxHealth){
-        health = health + 50;
-
-        if (health > maxHealth){
-            health = maxHealth;
+    public void drinkPotion() {
+        this.health += 10;
+        // Si nos pasamos del tope, lo ajustamos
+        if (this.health > this.maxHealth) {
+            this.health = this.maxHealth;
         }
-        return health;
+        System.out.println(this.name + " bebe poción. Vida actual: " + this.health);
+    }
+    public void rest() {
+        this.health += 50;
+        // Si nos pasamos del tope, lo ajustamos
+        if (this.health > this.maxHealth) {
+            this.health = this.maxHealth;
+        }
+        System.out.println(this.name + " descansa un rato. Vida actual: " + this.health);
     }
 
 
