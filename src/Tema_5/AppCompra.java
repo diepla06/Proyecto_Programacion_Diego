@@ -20,6 +20,8 @@ public class AppCompra {
             producto = sc.nextLine();
             if (!setProducto.contains(producto)) {
                 setProducto.add(producto);
+            }else{
+                System.out.println("El producto ya existe");
             }
         }
 
