@@ -8,7 +8,7 @@ public class Gimnasio {
     private Map<String, Usuraio > usuarios = new HashMap<>();
 
     public boolean darAlta(String dni, String nombre, int edad) {
-        if (usuarios.containsKey(dni)) return false; // Ya existe
+        if (usuarios.containsKey(dni)) return false;
         usuarios.put(dni, new Usuraio(nombre, edad));
         return true;
     }

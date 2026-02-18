@@ -8,7 +8,7 @@ public class MainGYM {
         int opcion = 0;
 
         do {
-            System.out.println("\n--- APP GESTIÓN GIMNASIO ---");
+            System.out.println("\nAPP GESTIÓN GIMNASIO");
             System.out.println("1. Alta | 2. Baja | 3. Buscar | 4. Modificar | 5. Salir");
             System.out.print("Opción: ");
 

@@ -22,6 +22,7 @@ public class AppCompraMejorada {public static void main(String[] args) {
     System.out.print("Producto " + contador + " : ");
 
     String prod;
+
     while (!(prod = sc.nextLine()).equalsIgnoreCase("fin")) {
         contador ++;
         System.out.print("Producto " + contador + " : ");

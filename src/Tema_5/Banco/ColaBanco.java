@@ -5,19 +5,19 @@ import java.util.LinkedList;
 public class ColaBanco {
     private LinkedList<Usuario> cola = new LinkedList<>();
 
-    //Añadir al final de la cola
+
     public void anadirPersona(Usuario u) {
         cola.addLast(u);
         System.out.println(u.getNombre() + " se ha unido a la cola.");
     }
 
-    //Primero "atendido"
+
     public Usuario atenderSiguiente() {
         if (cola.isEmpty()) return null;
         return cola.removeFirst();
     }
 
-    //"Se ha cansado de esperar"
+
     public boolean abandonarCola(String dni) {
         for (Usuario u : cola) {
             if (u.getDni().equalsIgnoreCase(dni)) {

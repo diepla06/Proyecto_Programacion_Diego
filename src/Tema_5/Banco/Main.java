@@ -40,7 +40,7 @@ public class Main {
                     case 4 -> miBanco.mostrarCola();
                 }
             } catch (Exception e) {
-                System.out.println("Entrada no válida.");
+                System.err.println("Entrada no válida.");
             }
         } while (opcion != 5);
     }
