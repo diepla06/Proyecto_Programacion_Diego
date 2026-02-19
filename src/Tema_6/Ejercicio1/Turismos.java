@@ -21,27 +21,36 @@ public class Turismos extends Vehiculo{
         tipoUso = true;
     }
 
-    @Override
+
     public int getNumPlazas() {
         return numPlazas;
     }
-    @Override
+
     public void setNumPlazas(int numPlazas) {
         this.numPlazas = numPlazas;
     }
 
-    @Override
+
     public boolean getTipoUso() {
         return true;
     }
-    @Override
-    public boolean setTipoUso() {
-        if(tipoUso){
-            return true;
-        }else {
-            return false;
-        }
+
+    public void setTipoUso() {
+            this.tipoUso = tipoUso;
     }
 
+    @Override
+    public String toString() {
 
+        String frase = "VEHICULO : COCHE \n";
+        frase += super.toString();
+        frase += "\nTiene " + getNumPuertas();
+        if (tipoUso){
+            frase += "\nEl coche es para uso profesional.";
+        }else {
+            frase += "\nEl coche es para uso personal.";
+        }
+
+        return frase;
+    }
 }

@@ -12,13 +12,7 @@ public class MainGato {
 
         do {
             try {
-                System.out.println("\nMenú Principal");
-                System.out.println("1. Crear nuevo Gato");
-                System.out.println("2. Cambiar nombre");
-                System.out.println("3. Cambiar edad");
-                System.out.println("4. Mostrar info del Gato");
-                System.out.println("5. Salir");
-                System.out.print("Elige una opción: ");
+                showmenu();
 
                 opcion = Integer.parseInt(sn.nextLine());
 
@@ -74,5 +68,15 @@ public class MainGato {
         if (g == null) {
             throw new Exception("Error: Primero debes crear un gato (Opción 1).");
         }
+    }
+
+    public static void  showmenu(){
+        System.out.println("\nMenú Principal");
+        System.out.println("1. Crear nuevo Gato");
+        System.out.println("2. Cambiar nombre");
+        System.out.println("3. Cambiar edad");
+        System.out.println("4. Mostrar info del Gato");
+        System.out.println("5. Salir");
+        System.out.print("Elige una opción: ");
     }
 }

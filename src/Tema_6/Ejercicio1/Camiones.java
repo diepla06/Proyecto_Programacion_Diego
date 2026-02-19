@@ -6,6 +6,48 @@ de uso (profesional o particular). Para los camiones el peso máximo
 autorizado y si la mercancía es peligrosa o no. Para ciclomotores la cilindrada
 y si necesita carnet (a partir de 125 cc necesita carnet). Necesita carnet NO es
 un atributo.*/
-public class Camiones {
+public class Camiones extends Vehiculo{
+    private int pMaxAutorized = 100;
+    private boolean mercancia;
 
+    public Camiones(int pMaxAutorized, boolean mercancia ,int numPuertas, int ano, String color, String modelo, String marca){
+        super(numPuertas, ano, color, modelo, marca);
+        this.mercancia = mercancia;
+        this.pMaxAutorized = pMaxAutorized;
+    }
+
+    public Camiones(){
+        super();
+        mercancia = true;
+
+    }
+
+
+    public void setMercancia(boolean mercancia) {
+        this.mercancia = mercancia;
+    }
+    public boolean isMercancia() {
+        return mercancia;
+    }
+
+    public void setpMaxAutorized(String pMaxAutorized) {
+        this.pMaxAutorized = pMaxAutorized;
+    }
+    public String getpMaxAutorized() {
+        return pMaxAutorized;
+    }
+
+    @Override
+    public String toString() {
+        String frase = "VEHICULO : CAMINONES \n";
+        frase += super.toString();
+        frase += "\nEl maximo peso autorizado es " + setpMaxAutorized();
+
+        if (mercancia){
+            frase += "\nLa mercancia es peligrosa.";
+        }else {
+            frase += "\nLa mercancia no es pelifrosa";
+        }
+
+    }
 }

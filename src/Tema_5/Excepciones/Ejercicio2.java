@@ -22,9 +22,9 @@ public class Ejercicio2 {
            System.out.println("El resultado es " + resultado);
 
         }catch (InputMismatchException exInp){
-           System.out.println("Valor introducido incorrecto // ERROR: " + exInp.getMessage());
+           System.err.println("Valor introducido incorrecto // ERROR: " + exInp.getMessage());
        }catch (ArithmeticException exAri){
-           System.out.println(num1 + "/" + num2 + "=" + "0" + " // ERROR: " + exAri.getMessage());
+           System.err.println(num1 + "/" + num2 + "=" + "0" + " // ERROR: " + exAri.getMessage());
        }
     }
 }

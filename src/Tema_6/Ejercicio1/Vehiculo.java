@@ -65,12 +65,8 @@ public abstract class Vehiculo {
         this.marca = marca;
     }
 
-
-    public abstract int getNumPlazas();
-
-    public abstract void setNumPlazas(int numPlazas);
-
-    public abstract boolean getTipoUso();
-
-    public abstract boolean setTipoUso();
+    public String toString() {
+        String frase = "Tiene: " + getNumPuertas() + " puertas. \nEs de el año " + getAno() + "\nEs de color " + getColor() +"\nEs un " + getModelo() + " de la marca " + getMarca();
+        return frase;
+    }
 }
