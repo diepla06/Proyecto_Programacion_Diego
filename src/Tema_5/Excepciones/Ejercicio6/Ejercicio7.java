@@ -15,10 +15,7 @@ public class Ejercicio7 {
         while (listaGatos.size() < 5) {
             try {
                 System.out.println("\nESTADO DEL REFUGIO: [" + listaGatos.size() + "/5]");
-                System.out.println("1. Registrar nuevo gato");
-                System.out.println("2. Ver gatos registrados");
-                System.out.println("3. Salir (solo si el cupo está lleno)");
-                System.out.print("Selecciona una opción: ");
+                showMenu();
 
                 opcion = Integer.parseInt(sn.nextLine());
 
@@ -39,7 +36,7 @@ public class Ejercicio7 {
                         if (listaGatos.isEmpty()) {
                             System.out.println("El refugio está vacío actualmente.");
                         } else {
-                            System.out.println("\n--- LISTA DE HUÉSPEDES ---");
+                            System.out.println("\nLISTA DE HUÉSPEDES");
                             for (Gato gato : listaGatos) {
                                 gato.imprimir();
                             }
@@ -63,7 +60,7 @@ public class Ejercicio7 {
             }
         }
 
-        System.out.println("\n==========================================");
+        System.out.println("\n");
         System.out.println("¡CUPO LLENO! Registro completado con éxito.");
         System.out.println("Listado final de los 5 elegidos:");
         for (Gato g : listaGatos) {
@@ -72,5 +69,12 @@ public class Ejercicio7 {
         System.out.println("==========================================");
 
         sn.close();
+    }
+
+    public static void showMenu(){
+        System.out.println("1. Registrar nuevo gato");
+        System.out.println("2. Ver gatos registrados");
+        System.out.println("3. Salir (solo si el cupo está lleno)");
+        System.out.print("Selecciona una opción: ");
     }
 }

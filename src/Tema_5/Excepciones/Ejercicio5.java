@@ -20,7 +20,7 @@ public class Ejercicio5 {
         }
 
         public static void main(String[] args) {
-            Scanner sn = new Scanner(System.in);
+            Scanner sc = new Scanner(System.in);
             int usuarioNum;
 
             System.out.println("--- Probador de Funciones con Excepciones ---");
@@ -28,7 +28,7 @@ public class Ejercicio5 {
             while (true) {
                 try {
                     System.out.print("\nIntroduce un número (o escribe algo no numérico para salir): ");
-                    usuarioNum = sn.nextInt();
+                    usuarioNum = sc.nextInt();
 
                     System.out.println("Intentando imprimir como positivo...");
                     imprimePositivo(usuarioNum);
@@ -43,6 +43,6 @@ public class Ejercicio5 {
                     System.err.println(e.getMessage());
                 }
             }
-            sn.close();
+            sc.close();
     }
 }

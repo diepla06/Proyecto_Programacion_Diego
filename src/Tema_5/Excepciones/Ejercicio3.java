@@ -1,6 +1,5 @@
 package Tema_5.Excepciones;
 
-import java.awt.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
