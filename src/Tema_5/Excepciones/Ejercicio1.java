@@ -14,7 +14,7 @@ public class Ejercicio1 {
 
             System.out.println("Valor introducido: " + num);
         }catch (InputMismatchException ex){
-            System.out.println("Valor introducido incorrecto // " + ex.getMessage());
+            System.err.println("Valor introducido incorrecto // " + ex.getMessage());
         }
 
     }

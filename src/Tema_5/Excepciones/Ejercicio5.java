@@ -38,11 +38,10 @@ public class Ejercicio5 {
 
                 } catch (InputMismatchException e) {
                     System.err.println("Saliendo del programa por entrada no válida...");
-                    break;
+                    System.out.println(e.getMessage());
                 } catch (Exception e) {
                     System.err.println(e.getMessage());
                 }
             }
-            sc.close();
     }
 }
