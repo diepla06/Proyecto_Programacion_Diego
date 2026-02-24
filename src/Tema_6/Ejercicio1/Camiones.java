@@ -30,10 +30,10 @@ public class Camiones extends Vehiculo{
         return mercancia;
     }
 
-    public void setpMaxAutorized(String pMaxAutorized) {
+    public void setPMaxAutorized(int pMaxAutorized) {
         this.pMaxAutorized = pMaxAutorized;
     }
-    public String getpMaxAutorized() {
+    public int getPMaxAutorized() {
         return pMaxAutorized;
     }
 
@@ -41,7 +41,7 @@ public class Camiones extends Vehiculo{
     public String toString() {
         String frase = "VEHICULO : CAMINONES \n";
         frase += super.toString();
-        frase += "\nEl maximo peso autorizado es " + setpMaxAutorized();
+        frase += "\nEl maximo peso autorizado es " + getPMaxAutorized();
 
         if (mercancia){
             frase += "\nLa mercancia es peligrosa.";
@@ -49,5 +49,6 @@ public class Camiones extends Vehiculo{
             frase += "\nLa mercancia no es pelifrosa";
         }
 
+        return frase;
     }
 }
