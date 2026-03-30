@@ -25,6 +25,7 @@ public class AtaqueEspadazoEncantado implements IAtaqueAvanzado {
     public double getEsfuerzoFisicoCoste() { return esfuerzoFisicoCoste; }
     public void setEsfuerzoFisicoCoste(double esfuerzo) { this.esfuerzoFisicoCoste = esfuerzo; }
 
+
     @Override
     public void lanzar() { System.out.println("¡Impacto de Espadazo Encantado!"); }
 
